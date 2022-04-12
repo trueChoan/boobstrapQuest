@@ -1,0 +1,48 @@
+body {
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --bs-primary-rgb: 35, 84, 161;
+    --bs-primary: rgb(var(--bs-primary-rgb));
+    --bs-gray-100: #f8f9fa;
+}
+
+.btn {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+}
+
+.card-text {
+    height: 100px;
+}
+
+.card-body {
+    max-height: 200px;
+}
+
+section {
+    height: 350px;
+    background-color: var(--bs-gray-100);
+}
+
+footer {
+    background-color: rgb(var(--bs-primary-rgb));
+    height: 50px;
+    color: var(--bs-gray-100);
+    width: 100%;
+    text-align: center;
+}
+
+footer,
+a {
+    color: var(--bs-gray-100);
+
+}
+
+iframe {
+    justify-content: center;
+}
