@@ -3,12 +3,16 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image:
+        url(https://sourdoreille.net/blindtest/img/noise.png), radial-gradient(ellipse at center, #e3cce4 0, #f01919be 10%, #d91394ce 100%);
 }
 
 :root {
     --bs-primary-rgb: 35, 84, 161;
     --bs-primary: rgb(var(--bs-primary-rgb));
-    --bs-gray-100: #f8f9fa;
+    --bs-gray-100: rgb(248, 249, 250);
+    --bs-gray-100-opacity: rgb(248, 249, 250, 0.7);
+
 }
 
 .btn {
@@ -25,9 +29,19 @@ body {
 }
 
 section {
+
     height: 350px;
-    background-color: var(--bs-gray-100);
+    background-color: var(--bs-gray-100-opacity);
+
 }
+
+@media screen and (min-width:800px) {
+    section {
+        clip-path: polygon(25% 0%, 100% 23%, 75% 90%, 0% 75%);
+
+    }
+}
+
 
 footer {
     background-color: rgb(var(--bs-primary-rgb));
