@@ -13,6 +13,8 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
 </head>
 <body>
 
@@ -22,7 +24,9 @@
   <h2>Générer votre signature High Society:</h2>
   <ol>
     <li>Remplissez tous les champs ci dessous</li>
-    <li>Exportez au format requis par votre client email. (c/c pour gmail, ou export HTML pour les outlook ou mail)</li>
+    <li>Exportez au format requis par votre client email. (copiez/collez le rendu pour Gmail ou RoundCube, ou c/c le code source avec le button dédiez pour mail)</li>
+    <li>Suivre le tuto ci dessous pour intégrer votre mail à votre client</li>
+
   </ol>
 </div>
 <div>
@@ -74,7 +78,7 @@
   <button class='select'>Select Signature (pour RoundCube)</button><br>
 
   <input type="checkbox" id="get" name="get" onchange="getFunction()" />
-  <label for="get">Get my code</label>
+  <label for="get">Obtenir mon code</label>
   <!-- <button class='select' onchange="getFunction()">Copy</button><br> -->
 
 </div>
@@ -84,7 +88,7 @@
       <tbody>
         <tr>
           <td style="font-size: 10pt; font-family: HelveticaNeue" rowspan="2" valign="top"><img src="https://www.highsociety.fr/img/signature/logo.jpg" width="101" height="101" border="0"></td>
-          <td style="font-family: HelveticaNeue; width: 480px; padding-left: 20px" valign="top"><span style="font-size: 13pt"><span class="name" style="line-height: 19pt"><strong>John Doe</strong> </span>&nbsp;</span><br><span class="position" style="color: #808080; font-size: 11pt; line-height: 13pt">Directrice</span><br><span class="phone" style="font-size: 10pt; font-family: HelveticaNeue; line-height: 13pt; color: #808080">06 07 08 09 10</span>
+          <td style="font-family: HelveticaNeue; width: 480px; padding-left: 20px" valign="top"><span style="font-size: 13pt"><span class="name" style="line-height: 19pt; font-weight: bold;"><strong>John Doe</strong> </span>&nbsp;</span><br><span class="position" style="color: #808080; font-size: 11pt; line-height: 13pt">Directrice</span><br><span class="phone" style="font-size: 10pt; font-family: HelveticaNeue; line-height: 13pt; color: #808080">06 07 08 09 10</span>
             <table style="width: 144px; height: 39px" border="0" cellspacing="0" cellpadding="0">
               <tbody>
                 <tr>
@@ -129,5 +133,6 @@
 </div>
 
 <hr>-->
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
