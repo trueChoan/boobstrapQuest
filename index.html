@@ -23,9 +23,9 @@
 <div>
   <h2>Générer votre signature High Society:</h2>
   <ol>
-    <li>Remplissez tous les champs ci dessous</li>
-    <li>Exportez au format requis par votre client email. (copiez/collez le rendu pour Gmail ou RoundCube, ou c/c le code source avec le button dédiez pour mail)</li>
-    <li>Suivre le tuto ci dessous pour intégrer votre mail à votre client</li>
+    <li>Remplissez tous les champs</li>
+    <li>Exportez au format requis par votre client email. (c/c directement le rendu pour RoundCube, ou c/c le code source avec le button dédié pour  l'appli mac Mail)</li>
+    <li>Suivre les étapes ci dessous pour intégrer votre mail à votre client</li>
 
   </ol>
 </div>
@@ -75,10 +75,10 @@
 <hr>
 
 <div class='controls' data-sig='signature_1'>
-  <button class='select'>Select Signature (pour RoundCube)</button><br>
+  <button class='select'>Selectionnez Signature (pour RoundCube)</button><br>
 
   <input type="checkbox" id="get" name="get" onchange="getFunction()" />
-  <label for="get">Obtenir mon code</label>
+  <label for="get">Obtenir mon code HTML pour Mail</label>
   <!-- <button class='select' onchange="getFunction()">Copy</button><br> -->
 
 </div>
@@ -133,6 +133,28 @@
 </div>
 
 <hr>-->
+
+
+<h3>Instructions :</h3>
+<h4>Ajouter la signature à Roundcube:</h3>
+
+<div class='instructions'>
+  <ol>
+
+      <li>Cliquez sur le bouton <span class ="bu">Selectionnez la signature</span></li>
+      <li>Copiez avec <code>cmd + C</code></li>
+      <li>Allez sur   <a href="https://mail.highsociety.fr/">Roundcube High society</a></li>
+      <li>Ouvez les paramètres dans le menu de gauche</li>
+      <li>Allez sur l'onglet Identités</li>
+      <li>Sélectionnez votre mail</li>
+      <li>Puis dans le champ "Signature" : <code>cmd + V</code> pour coller le contenu précemment copié. </li>
+    </ol>
+
+
+  <img src='http://i.imgur.com/DH82U74.gif'>
+</div>
+
+
 <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
