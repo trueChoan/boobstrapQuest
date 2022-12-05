@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Signature High Society
+    </title>
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="">
+</head>
+<body>
+
+
+
+<div>
+  <h2>Générer votre signature High Society:</h2>
+  <ol>
+    <li>Remplissez tous les champs ci dessous</li>
+    <li>Exportez au format requis par votre client email. (c/c pour gmail, ou export HTML pour les outlook ou mail)</li>
+  </ol>
+</div>
+<div>
+  <h3>Vos informations:</h3>
+
+  <div id='inputs'>
+    <table>
+      <tr>
+        <td>
+          <label for='Nom'>Name:</label>
+        </td>
+        <td>
+          <input id='name' placeholder='Prénom & Nom'></input>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for='position'>Position:</label>
+        </td>
+        <td>
+          <input id='position' placeholder='Votre rôle'></input>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label for='phone'>Phone:</label>
+        </td>
+        <td>
+          <input id='phone' placeholder='06 07 08 09 10'></input>
+        </td>
+      </tr>
+      <!--    <tr>
+      <td>
+        <label for='email'>Email:</label>
+      </td>
+      <td>
+        <input id='email' placeholder='name@gmail.com'></input>
+      </td>
+    </tr>-->
+    </table>
+  </div>
+</div>
+
+<h3>Signature:</h3>
+
+<hr>
+
+<div class='controls' data-sig='signature_1'>
+  <button class='select'>Select Signature (pour RoundCube)</button><br>
+
+  <input type="checkbox" id="get" name="get" onchange="getFunction()" />
+  <label for="get">Get my code</label>
+  <!-- <button class='select' onchange="getFunction()">Copy</button><br> -->
+
+</div>
+<div id='signature_1'>
+  <div id="htmlcode">
+    <table style="width: 393px; height: 115px" border="0" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td style="font-size: 10pt; font-family: HelveticaNeue" rowspan="2" valign="top"><img src="https://www.highsociety.fr/img/signature/logo.jpg" width="101" height="101" border="0"></td>
+          <td style="font-family: HelveticaNeue; width: 480px; padding-left: 20px" valign="top"><span style="font-size: 13pt"><span class="name" style="line-height: 19pt"><strong>John Doe</strong> </span>&nbsp;</span><br><span class="position" style="color: #808080; font-size: 11pt; line-height: 13pt">Directrice</span><br><span class="phone" style="font-size: 10pt; font-family: HelveticaNeue; line-height: 13pt; color: #808080">06 07 08 09 10</span>
+            <table style="width: 144px; height: 39px" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td style="width: 200px" valign="bottom"><a href="https://highsociety.fr/fr" target="_blank" rel="noreferrer"><img style="margin-top: 5px; margin-left: -0.8px" src="https://www.highsociety.fr/img/signature/site-noir.png" width="10" height="10" border="0"></a>&nbsp;&nbsp;<a href="https://facebook.com/highsocietyfrance" target="_blank" rel="noreferrer"><img style="margin-top: 5px" src="https://www.highsociety.fr/img/signature/facebook-noir.png" width="11" height="11" border="0"></a>&nbsp;&nbsp;<a href="https://instagram.com/high.society.france" target="_blank" rel="noreferrer"><img style="margin-top: 5px" src="https://www.highsociety.fr/img/signature/insta-noir.png" width="11" height="11" border="0"></a></td>
+                </tr>
+                <tr>
+                  <td style="width: 280px" valign="bottom"><img src="https://www.highsociety.fr/img/signature/highsociety.png" width="auto" height="20" border="0"></td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<hr>
+<!--
+<div id='signature_1'>
+  <pre>
+  &lt;table style="width: 393px; height: 115px" border="0" cellspacing="0" cellpadding="0" >
+  &lt;tbody>
+  &lt;tr>
+  &lt;td style="font-size: 10pt; font-family: HelveticaNeue" rowspan="2" valign="top"> &lt;img src="https://www.highsociety.fr/img/signature/logo.jpg" width="101" height="101" border="0">&lt;/td>
+  &lt;td style="font-family: HelveticaNeue; width: 480px; padding-left: 20px" valign="top">&lt;span style="font-size: 13pt">&lt;span class="name" style="line-height: 19pt"><span class="name">John Doe</span> &lt;/span>&nbsp;&lt;/span>&lt;br>&lt;span class="position" style="color: #808080; font-size: 11pt; line-height: 13pt"><span class="position">Directrice</span>&lt;/span>&lt;br>&lt;span class="phone" style="font-size: 10pt; font-family: HelveticaNeue; line-height: 13pt;  color: #808080"><span class="phone">06 07 08 09 10</span> &lt;/span>
+  &lt;table style="width: 144px; height: 39px" border="0" cellspacing="0" cellpadding="0">
+  &lt;tbody>
+  &lt;tr>
+  &lt;td style="width: 200px" valign="bottom">&lt;a href="https://highsociety.fr/fr" target="_blank" rel="noreferrer">&lt;img style="margin-top: 5px; margin-left: -0.8px" src="https://www.highsociety.fr/img/signature/site-noir.png" width="10" height="10" border="0">&lt;/a>&nbsp;&nbsp; &lt;a href="https://facebook.com/highsocietyfrance" target="_blank" rel="noreferrer"> &lt;img style="margin-top: 5px" src="https://www.highsociety.fr/img/signature/facebook-noir.png" width="11" height="11" border="0">&lt;/a>&nbsp;&nbsp;&lt; a href="https://instagram.com/high.society.france" target="_blank" rel="noreferrer">&lt;img style="margin-top: 5px" src="https://www.highsociety.fr/img/signature/insta-noir.png" width="11" height="11" border="0">&lt;/a>
+  &lt;/td>
+  &lt;/tr>
+  &lt;tr>
+  &lt;td style="width: 280px" valign="bottom">&lt;img src="https://www.highsociety.fr/img/signature/highsociety.png" width="auto" height="20" border="0">&lt;/td>
+  &lt;/tr>
+  &lt;/tbody>
+  &lt;/table>
+  &lt;/td>
+  &lt;/tr>
+  &lt;/tbody>
+  &lt;/table>
+</pre>
+</div>
+
+<hr>-->
+</body>
+</html>
