@@ -1,3 +1,3 @@
-# boobstrapQuest
+# Mail signature
 
-beware the boobietrap
+Signature generator for my company
