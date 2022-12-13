@@ -10,8 +10,25 @@ function selectText(element) {
     range.selectNodeContents(element);
     selection.removeAllRanges();
     selection.addRange(range);
+    document.execCommand("copy");
+
   }
 }
+
+
+const copyText = () => {
+  let copyText = document.getElementById("htmlcode");
+  let content = copyText.innerHTML;
+  console.log(content);
+  // Select the text field
+  selectText(copyText);
+
+  // Copy the text inside the text field
+  document.execCommand("copy");
+  // Alert the copied text
+  alert("Copied the text: " + content);
+}
+
 
 $('.controls > .select').click(function () {
   var signature_id = $($(this).parents('.controls')[0]).data('sig');
@@ -50,3 +67,16 @@ function getFunction() {
   }
 
 }
+
+function getLogican() {
+  if (document.getElementById('getlogican').checked) {
+    let e = document.getElementById("htmlcode2");
+    let content = e.innerHTML;
+    prompt("Copiez le contenu: Cmd+C, Enter", content);
+
+
+  }
+
+}
+
+

@@ -1,64 +1,65 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Signature High Society
-    </title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Signature High Society
+  </title>
 
 
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
 </head>
+
 <body>
 
 
 
-<div>
-  <h2>Générer votre signature High Society:</h2>
-  <ol>
-    <li>Remplissez tous les champs</li>
-    <li>Exportez au format requis par votre client email. (c/c directement le rendu pour RoundCube, ou c/c le code source avec le button dédié pour  l'appli mac Mail)</li>
-    <li>Suivre les étapes ci dessous pour intégrer votre mail à votre client</li>
+  <div>
+    <h2>Générer votre signature High Society:</h2>
+    <ol>
+      <li>Remplissez tous les champs</li>
+      <li>Exportez au format requis par votre client email. (c/c directement le rendu pour RoundCube, ou c/c le code
+        source avec le button dédié pour l'appli mac Mail)</li>
+      <li>Suivre les étapes ci dessous pour intégrer votre mail à votre client</li>
 
-  </ol>
-</div>
-<div>
-  <h3>Vos informations:</h3>
+    </ol>
+  </div>
+  <div>
+    <h3>Vos informations:</h3>
 
-  <div id='inputs'>
-    <table>
-      <tr>
-        <td>
-          <label for='Nom'>Prénom Nom:</label>
-        </td>
-        <td>
-          <input id='name' placeholder='Prénom Nom'></input>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for='position'>Role:</label>
-        </td>
-        <td>
-          <input id='position' placeholder='Votre rôle'></input>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <label for='phone'>Phone:</label>
-        </td>
-        <td>
-          <input id='phone' placeholder='06 07 08 09 10'></input>
-        </td>
-      </tr>
-      <!--    <tr>
+    <div id='inputs'>
+      <table>
+        <tr>
+          <td>
+            <label for='Nom'>Prénom Nom:</label>
+          </td>
+          <td>
+            <input id='name' placeholder='Prénom Nom'></input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for='position'>Role:</label>
+          </td>
+          <td>
+            <input id='position' placeholder='Votre rôle'></input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for='phone'>Phone:</label>
+          </td>
+          <td>
+            <input id='phone' placeholder='06 07 08 09 10'></input>
+          </td>
+        </tr>
+        <!--    <tr>
       <td>
         <label for='email'>Email:</label>
       </td>
@@ -66,37 +67,136 @@
         <input id='email' placeholder='name@gmail.com'></input>
       </td>
     </tr>-->
-    </table>
+      </table>
+    </div>
   </div>
-</div>
 
-<h3>Signature:</h3>
+  <h3>Signature:</h3>
 
-<hr>
+  <hr>
 
-<div class='controls' data-sig='signature_1'>
-  <button class='select'>Selectionnez Signature (pour RoundCube)</button><br>
+  <div class='controls' data-sig='signature_1'>
+    <button class='select'>Selectionnez Signature (pour RoundCube)</button><br>
 
-  <input type="checkbox" id="get" name="get" onchange="getFunction()" />
-  <label for="get">Obtenir mon code HTML pour Mail</label>
-  <!-- <button class='select' onchange="getFunction()">Copy</button><br> -->
+    <input type="checkbox" id="get" name="get" onchange="getFunction()" />
+    <label for="get">Obtenir mon code HTML pour Mail</label>
+    <!-- <button class='select' onchange="getFunction()">Copy</button><br> -->
 
-</div>
-<div id='signature_1'>
+  </div>
+  <div id='signature_1'>
+    <div id="htmlcode">
+      <table style="width: 393px; height: 115px" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="font-size: 10pt; font-family: Arial" rowspan="2" valign="top"><img
+                src="https://www.highsociety.fr/img/signature/logo.jpg" width="101" height="101" border="0"></td>
+            <td style="font-family: Arial; width: 480px; padding-left: 20px" valign="top"><span
+                style="font-size: 13pt"><span class="name" style="line-height: 19pt; font-weight: bold;"><strong>Mélanie
+                    Reynaud</strong> </span>&nbsp;</span><br><span class="position"
+                style="color: #808080; font-size: 11pt; line-height: 13pt">Directrice de la communication
+              </span><br><span class="phone"
+                style="font-size: 10pt; font-family: Arial; line-height: 13pt; color: #808080">06 07 08 09 10</span>
+              <table style="width: 144px; height: 39px" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td style="width: 200px" valign="bottom"><a href="https://highsociety.fr/fr" target="_blank"
+                        rel="noreferrer"><img style="margin-top: 5px; margin-left: -0.8px"
+                          src="https://www.highsociety.fr/img/signature/site-noir.png" width="10" height="10"
+                          border="0"></a>&nbsp;&nbsp;<a href="https://facebook.com/highsocietyfrance" target="_blank"
+                        rel="noreferrer"><img style="margin-top: 5px"
+                          src="https://www.highsociety.fr/img/signature/facebook-noir.png" width="11" height="11"
+                          border="0"></a>&nbsp;&nbsp;<a href="https://instagram.com/high.society.france" target="_blank"
+                        rel="noreferrer"><img style="margin-top: 5px"
+                          src="https://www.highsociety.fr/img/signature/insta-noir.png" width="11" height="11"
+                          border="0"></a></td>
+                  </tr>
+                  <tr>
+                    <td style="width: 280px" valign="bottom"><img
+                        src="https://www.highsociety.fr/img/signature/highsociety.png" width="auto" height="20"
+                        border="0"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr>
+  <div class='controls' data-sig='signature_2'>
+    <button class='select'>Selectionnez Signature (pour RoundCube)</button><br>
+
+    <input type="checkbox" id="getlogican" name="getlogican" onchange="getLogican()" />
+    <label for="getlogican">Obtenir mon code HTML pour Mail</label>
+    <!-- <button class='select' onchange="getFunction()">Copy</button><br> -->
+
+  </div>
+  <div id='signature_2'>
+    <div id="htmlcode2">
+      <table style="width: 393px; height: 115px" border="0" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td style="font-size: 10pt; font-family: Arial" rowspan="2" valign="top"><img
+                src="http://fleursenfrance.fr/img/logicann.jpg" width="101" height="101" border="0"></td>
+            <td style="font-family: Arial; width: 480px; padding-left: 20px" valign="top"><span
+                style="font-size: 13pt"><span class="name" style="line-height: 19pt; font-weight: bold;"><strong>Mélanie
+                    Reynaud</strong> </span>&nbsp;</span><br><span class="position"
+                style="color: #808080; font-size: 11pt; line-height: 13pt">Directrice de la communication
+              </span><br><span class="phone"
+                style="font-size: 10pt; font-family: Arial; line-height: 13pt; color: #808080">06 07 08 09 10</span>
+              <table style="width: 144px; height: 39px" border="0" cellspacing="0" cellpadding="0">
+                <tbody>
+                  <tr>
+                    <td style="width: 200px" valign="bottom">
+                      <a href="https://logicann.fr/" target="_blank" rel="noreferrer">
+                        <img style="margin-top: 5px; margin-left: -0.8px"
+                          src="https://www.highsociety.fr/img/signature/site-noir.png" width="10" height="10"
+                          border="0"></a>&nbsp;&nbsp;
+
+                      <a href="https://www.linkedin.com/company/logicann/" target="_blank" rel="noreferrer">
+                        <img style="margin-top: 5px" src="http://fleursenfrance.fr/img/icon-linkedin.png" width="11"
+                          height="11" border="0"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 280px;visibility: hidden;" valign="bottom"><img
+                        src="http://fleursenfrance.fr/img/logicanfleur.png" width="auto" height="20" border="0"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <hr>
+
+
+
+
+
+  <!-- <div id='signature_1'>
   <div id="htmlcode">
     <table style="width: 393px; height: 115px" border="0" cellspacing="0" cellpadding="0">
       <tbody>
         <tr>
-          <td style="font-size: 10pt; font-family: Arial" rowspan="2" valign="top"><img src="https://www.highsociety.fr/img/signature/logo.jpg" width="101" height="101" border="0"></td>
+          <td style="font-size: 10pt; font-family: Arial" rowspan="2" valign="top"><img src="http://fleursenfrance.fr/img/fleur.png" width="81" height="101" border="0"></td>
           <td style="font-family: Arial; width: 480px; padding-left: 20px" valign="top"><span style="font-size: 13pt"><span class="name" style="line-height: 19pt; font-weight: bold;"><strong>Mélanie Reynaud</strong> </span>&nbsp;</span><br><span class="position" style="color: #808080; font-size: 11pt; line-height: 13pt">Directrice de la communication
 </span><br><span class="phone" style="font-size: 10pt; font-family: Arial; line-height: 13pt; color: #808080">06 07 08 09 10</span>
             <table style="width: 144px; height: 39px" border="0" cellspacing="0" cellpadding="0">
               <tbody>
                 <tr>
-                  <td style="width: 200px" valign="bottom"><a href="https://highsociety.fr/fr" target="_blank" rel="noreferrer"><img style="margin-top: 5px; margin-left: -0.8px" src="https://www.highsociety.fr/img/signature/site-noir.png" width="10" height="10" border="0"></a>&nbsp;&nbsp;<a href="https://facebook.com/highsocietyfrance" target="_blank" rel="noreferrer"><img style="margin-top: 5px" src="https://www.highsociety.fr/img/signature/facebook-noir.png" width="11" height="11" border="0"></a>&nbsp;&nbsp;<a href="https://instagram.com/high.society.france" target="_blank" rel="noreferrer"><img style="margin-top: 5px" src="https://www.highsociety.fr/img/signature/insta-noir.png" width="11" height="11" border="0"></a></td>
+                  <td style="width: 200px" valign="bottom">
+                    <a href="https://logicann.fr/" target="_blank" rel="noreferrer">
+                      <img style="margin-top: 5px; margin-left: -0.8px" src="https://www.highsociety.fr/img/signature/site-noir.png" width="10" height="10" border="0"></a>&nbsp;&nbsp;
+
+                        <a href="https://www.linkedin.com/company/logicann/" target="_blank" rel="noreferrer">
+                          <img style="margin-top: 5px" src="http://fleursenfrance.fr/img/icon-linkedin.png" width="11" height="11" border="0"></a></td>
                 </tr>
                 <tr>
-                  <td style="width: 280px" valign="bottom"><img src="https://www.highsociety.fr/img/signature/highsociety.png" width="auto" height="20" border="0"></td>
+                  <td style="width: 280px; " valign="bottom"><img src="http://fleursenfrance.fr/img/logicanfleur.png" width="auto" height="20" border="0"></td>
                 </tr>
               </tbody>
             </table>
@@ -105,9 +205,8 @@
       </tbody>
     </table>
   </div>
-</div>
-<hr>
-<!--
+</div> -->
+  <!--
 <div id='signature_1'>
   <pre>
   &lt;table style="width: 393px; height: 115px" border="0" cellspacing="0" cellpadding="0" >
@@ -136,41 +235,43 @@
 <hr>-->
 
 
-<h3>Instructions :</h3>
-<h4>Ajouter la signature à Roundcube:</h3>
+  <h3>Instructions :</h3>
+  <h4>Ajouter la signature à Roundcube:</h3>
 
-<div class='instructions'>
-  <ol>
+    <div class='instructions'>
+      <ol>
 
-      <li>Cliquez sur le bouton <span class ="bu">Selectionnez la signature</span></li>
-      <li>Copiez avec <code>cmd + C</code></li>
-      <li>Allez sur   <a href="https://mail.highsociety.fr/">Roundcube High society</a></li>
-      <li>Ouvez les paramètres dans le menu de gauche</li>
-      <li>Allez sur l'onglet Identités</li>
-      <li>Sélectionnez votre mail</li>
-      <li>Puis dans le champ "Signature" : <code>cmd + V</code> pour coller le contenu précemment copié. </li>
-    </ol>
-
-</div>
-
-<h4>Ajouter la signature à Mail sur mac :</h3>
-
-  <div  >
-    <ol>
-
-        <li>Cochez obtenir mon code HTML </li>
-        <li>Une fenetre va s'ouvrir dans le navigateur/li>
-        <li>Copiez avec <code>cmd + C</code> tout le contenu</li>
-        <li>Maintenant suivez ce tuto  à partir de l'étape 2</li>
-        <a href="https://la-webeuse.com/signature-mail-mac-os-sierra/">https://la-webeuse.com/signature-mail-mac-os-sierra/</a>
-        <li>Redémarrer votre ordinateur, la signature devrait apparaitre lorsque vous rédigez un mail</li>
-
+        <li>Cliquez sur le bouton <span class="bu">Selectionnez la signature</span></li>
+        <li>Copiez avec <code>cmd + C</code></li>
+        <li>Allez sur <a href="https://mail.highsociety.fr/">Roundcube High society</a></li>
+        <li>Ouvez les paramètres dans le menu de gauche</li>
+        <li>Allez sur l'onglet Identités</li>
+        <li>Sélectionnez votre mail</li>
+        <li>Puis dans le champ "Signature" : <code>cmd + V</code> pour coller le contenu précemment copié. </li>
       </ol>
 
+    </div>
 
-  </div>
+    <h4>Ajouter la signature à Mail sur mac :</h3>
+
+      <div>
+        <ol>
+
+          <li>Cochez obtenir mon code HTML </li>
+          <li>Une fenetre va s'ouvrir dans le navigateur/li>
+          <li>Copiez avec <code>cmd + C</code> tout le contenu</li>
+          <li>Maintenant suivez ce tuto à partir de l'étape 2</li>
+          <a
+            href="https://la-webeuse.com/signature-mail-mac-os-sierra/">https://la-webeuse.com/signature-mail-mac-os-sierra/</a>
+          <li>Redémarrer votre ordinateur, la signature devrait apparaitre lorsque vous rédigez un mail</li>
+
+        </ol>
 
 
-<script type="text/javascript" src="index.js"></script>
+      </div>
+
+
+      <script type="text/javascript" src="index.js"></script>
 </body>
+
 </html>
