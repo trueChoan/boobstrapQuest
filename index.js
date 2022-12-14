@@ -11,10 +11,8 @@ function selectText(element) {
     selection.removeAllRanges();
     selection.addRange(range);
     document.execCommand("copy");
-
   }
 }
-
 
 const copyText = () => {
   let copyText = document.getElementById("htmlcode");
@@ -27,56 +25,135 @@ const copyText = () => {
   document.execCommand("copy");
   // Alert the copied text
   alert("Copied the text: " + content);
-}
+};
 
-
-$('.controls > .select').click(function () {
-  var signature_id = $($(this).parents('.controls')[0]).data('sig');
-  selectText($('#' + signature_id)[0]);
+$(".controls > .select").click(function () {
+  var signature_id = $($(this).parents(".controls")[0]).data("sig");
+  selectText($("#" + signature_id)[0]);
 });
 
-$('.controls > .save').click(function () {
-  var link = $(this).siblings('a')[0];
-  var sig_div = $('#' + $(this).parents('.controls').data('sig') + '_container');
+$(".controls > .save").click(function () {
+  var link = $(this).siblings("a")[0];
+  var sig_div = $("#" + $(this).parents(".controls").data("sig") + "_container");
   var sig_html = $(sig_div).html();
-  $(link).attr('href', 'data:text/html, ' + sig_html);
+  $(link).attr("href", "data:text/html, " + sig_html);
   $(this).hide();
   $(link).show();
 });
 
 // update per inputs
-$('#inputs input').keyup(function () {
-  var input = $(this).attr('id');
+$("#inputs input").keyup(function () {
+  var input = $(this).attr("id");
   var val = $(this).val();
-  $('.' + input).html(val);
-  if (input == 'email') {
-    $('.email').attr('href', 'mailto:' + val);
+  $("." + input).html(val);
+  if (input == "email") {
+    $(".email").attr("href", "mailto:" + val);
   }
-  $('.controls > a').hide();
-  $('.controls > .save').show();
+  $(".controls > a").hide();
+  $(".controls > .save").show();
 });
 
-
 function getFunction() {
-  if (document.getElementById('get').checked) {
+  if (document.getElementById("get").checked) {
     let e = document.getElementById("htmlcode");
     let content = e.innerHTML;
     prompt("Copiez le contenu: Cmd+C, Enter", content);
-
-
   }
-
 }
 
 function getLogican() {
-  if (document.getElementById('getlogican').checked) {
+  if (document.getElementById("getlogican").checked) {
     let e = document.getElementById("htmlcode2");
     let content = e.innerHTML;
     prompt("Copiez le contenu: Cmd+C, Enter", content);
-
-
   }
-
 }
 
+//get the modal
+const modal = document.getElementById("myModal");
+const modal2 = document.getElementById("myModal2");
+const modal3 = document.getElementById("myModal3");
+const modal4 = document.getElementById("myModal4");
 
+// get the image and insert it inside the modal - use its "alt" text as a caption
+const img = document.getElementById("myImg");
+const img2 = document.getElementById("myImg2");
+const img3 = document.getElementById("myImg3");
+const img4 = document.getElementById("myImg4");
+const modalImg = document.getElementById("img01");
+const modalImg2 = document.getElementById("img02");
+const modalImg3 = document.getElementById("img03");
+const modalImg4 = document.getElementById("img04");
+const captionText = document.getElementById("caption");
+const captionText2 = document.getElementById("caption2");
+const captionText3 = document.getElementById("caption3");
+const captionText4 = document.getElementById("caption4");
+
+img.onclick = function () {
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+};
+
+img2.onclick = function () {
+  modal2.style.display = "block";
+  modalImg2.src = this.src;
+  captionText2.innerHTML = this.alt;
+};
+
+img3.onclick = function () {
+  modal3.style.display = "block";
+  modalImg3.src = this.src;
+  captionText3.innerHTML = this.alt;
+};
+
+img4.onclick = function () {
+  modal4.style.display = "block";
+  modalImg4.src = this.src;
+  captionText4.innerHTML = this.alt;
+};
+
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
+const span2 = document.getElementsByClassName("close")[1];
+const span3 = document.getElementsByClassName("close")[2];
+const span4 = document.getElementsByClassName("close")[3];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  if ((modal.style.display = "block")) {
+    modal.style.display = "none";
+  }
+};
+span2.onclick = function () {
+  if ((modal2.style.display = "block")) {
+    modal2.style.display = "none";
+  }
+};
+span3.onclick = function () {
+  if ((modal3.style.display = "block")) {
+    modal3.style.display = "none";
+  }
+};
+span4.onclick = function () {
+  if ((modal4.style.display = "block")) {
+    modal4.style.display = "none";
+  }
+};
+
+//when the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  console.log(event.target);
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+  if (event.target == modal3) {
+    modal3.style.display = "none";
+  }
+  if (event.target == modal4) {
+    modal4.style.display = "none";
+  }
+};

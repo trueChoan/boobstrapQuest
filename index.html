@@ -21,7 +21,7 @@
 
 
   <div>
-    <h2>Générer votre signature High Society:</h2>
+    <h1>Générez votre signature High Society:</h1>
     <ol>
       <li>Remplissez tous les champs</li>
       <li>Exportez au format requis par votre client email. (c/c directement le rendu pour RoundCube, ou c/c le code
@@ -76,10 +76,10 @@
   <hr>
 
   <div class='controls' data-sig='signature_1'>
-    <button class='select'>Selectionnez Signature (pour RoundCube)</button><br>
+    <button class='select'>Selectionnez </button><br>
 
     <input type="checkbox" id="get" name="get" onchange="getFunction()" />
-    <label for="get">Obtenir mon code HTML pour Mail</label>
+    <label for="get">Obtenir mon Code HTML</label>
     <!-- <button class='select' onchange="getFunction()">Copy</button><br> -->
 
   </div>
@@ -91,7 +91,8 @@
             <td style="font-size: 10pt; font-family: Arial" rowspan="2" valign="top"><img
                 src="https://www.highsociety.fr/img/signature/logo.jpg" width="101" height="101" border="0"></td>
             <td style="font-family: Arial; width: 480px; padding-left: 20px" valign="top"><span
-                style="font-size: 13pt"><span class="name" style="line-height: 19pt; font-weight: bold;"><strong>Mélanie
+                style="font-size: 13pt;"><span class="name"
+                  style="line-height: 19pt; font-weight: bold; color: black;"><strong>Mélanie
                     Reynaud</strong> </span>&nbsp;</span><br><span class="position"
                 style="color: #808080; font-size: 11pt; line-height: 13pt">Directrice de la communication
               </span><br><span class="phone"
@@ -99,8 +100,8 @@
               <table style="width: 144px; height: 39px" border="0" cellspacing="0" cellpadding="0">
                 <tbody>
                   <tr>
-                    <td style="width: 200px" valign="bottom"><a href="https://highsociety.fr/fr" target="_blank"
-                        rel="noreferrer"><img style="margin-top: 5px; margin-left: -0.8px"
+                    <td style="width: 200px" valign="bottom"><a href="https://highsociety.fr" target="_blank"><img
+                          style="margin-top: 5px; margin-left: -0.8px"
                           src="https://www.highsociety.fr/img/signature/site-noir.png" width="10" height="10"
                           border="0"></a>&nbsp;&nbsp;<a href="https://facebook.com/highsocietyfrance" target="_blank"
                         rel="noreferrer"><img style="margin-top: 5px"
@@ -125,10 +126,10 @@
   </div>
   <hr>
   <div class='controls' data-sig='signature_2'>
-    <button class='select'>Selectionnez Signature (pour RoundCube)</button><br>
+    <button class='select'>Selectionnez</button><br>
 
     <input type="checkbox" id="getlogican" name="getlogican" onchange="getLogican()" />
-    <label for="getlogican">Obtenir mon code HTML pour Mail</label>
+    <label for="getlogican">Obtenir mon Code HTML</label>
     <!-- <button class='select' onchange="getFunction()">Copy</button><br> -->
 
   </div>
@@ -138,9 +139,10 @@
         <tbody>
           <tr>
             <td style="font-size: 10pt; font-family: Arial" rowspan="2" valign="top"><img
-                src="http://fleursenfrance.fr/img/logicann.jpg" width="101" height="101" border="0"></td>
+                src="https://i.postimg.cc/8kHJH59S/logicann.jpg" width="101" height="101" border="0"></td>
             <td style="font-family: Arial; width: 480px; padding-left: 20px" valign="top"><span
-                style="font-size: 13pt"><span class="name" style="line-height: 19pt; font-weight: bold;"><strong>Mélanie
+                style="font-size: 13pt"><span class="name"
+                  style="line-height: 19pt; font-weight: bold;  color: black;"><strong>Mélanie
                     Reynaud</strong> </span>&nbsp;</span><br><span class="position"
                 style="color: #808080; font-size: 11pt; line-height: 13pt">Directrice de la communication
               </span><br><span class="phone"
@@ -155,13 +157,12 @@
                           border="0"></a>&nbsp;&nbsp;
 
                       <a href="https://www.linkedin.com/company/logicann/" target="_blank" rel="noreferrer">
-                        <img style="margin-top: 5px" src="http://fleursenfrance.fr/img/icon-linkedin.png" width="11"
+                        <img style="margin-top: 5px" src="https://i.postimg.cc/FK7Vtct3/icon-linkedin.png" width="11"
                           height="11" border="0"></a>
                     </td>
                   </tr>
                   <tr>
-                    <td style="width: 280px;visibility: hidden;" valign="bottom"><img
-                        src="http://fleursenfrance.fr/img/logicanfleur.png" width="auto" height="20" border="0"></td>
+                    <td style="width: 280px; visibility: hidden;" valign="bottom"> &nbsp;</td>
                   </tr>
                 </tbody>
               </table>
@@ -241,13 +242,84 @@
     <div class='instructions'>
       <ol>
 
-        <li>Cliquez sur le bouton <span class="bu">Selectionnez la signature</span></li>
-        <li>Copiez avec <code>cmd + C</code></li>
+        <li>Cochez obtenir mon code HTML </li>
+        <li>Une fenetre va s'ouvrir dans le navigateur</li>
+        <li>Copiez avec <code>cmd + C</code> tout le contenu de la fenetre</li>
         <li>Allez sur <a href="https://mail.highsociety.fr/">Roundcube High society</a></li>
         <li>Ouvez les paramètres dans le menu de gauche</li>
         <li>Allez sur l'onglet Identités</li>
         <li>Sélectionnez votre mail</li>
-        <li>Puis dans le champ "Signature" : <code>cmd + V</code> pour coller le contenu précemment copié. </li>
+        <li>Au dessus du champ signature, cliquez sur l'icone pour activer le HTML</li>
+        <img id="myImg" src="https://i.postimg.cc/fRQhs3Nt/Capture-d-e-cran-2022-12-14-a-15-34-56.png" width="151"
+          border="0" alt="cliquez sur l'icone pour activer le HTML">
+        <div id="myModal" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img01"
+            src="https://i.postimg.cc/fRQhs3Nt/Capture-d-e-cran-2022-12-14-a-15-34-56.png"
+            alt="cliquez sur l'icone pour activer le HTML">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption"></div>
+        </div>
+        <li>Ensuite un menu s'affiche,
+          cliquez sur l'icone pour activer le code source : </li>
+        <img id="myImg2" src="https://i.postimg.cc/RhymvyX4/Capture-d-e-cran-2022-12-14-a-12-07-04.png" width="401"
+          alt="activez le code source">
+        <div id="myModal2" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" src="https://i.postimg.cc/RhymvyX4/Capture-d-e-cran-2022-12-14-a-12-07-04.png"
+            alt="activez le code source" id="img02">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption2"></div>
+        </div>
+        <li>Puis dans la fenetre qui s'ouvre, supprimez l'ancien contenu (si il y a) et collez votre code HTML :
+          <code>cmd + V</code>
+        </li>
+        <img id="myImg3" src="https://i.postimg.cc/k5HPQkP8/Capture-d-e-cran-2022-12-14-a-12-09-12.png" width="151"
+          alt="Collez le code HTML précédemment copié">
+        <div id="myModal3" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img03"
+            src="https://i.postimg.cc/k5HPQkP8/Capture-d-e-cran-2022-12-14-a-12-09-12.png"
+            alt=" cliquez sur l'icone pour activer le HTML">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption3"></div>
+        </div>
+        <li>Cliquez OK et enregistrez votre signature.</li>
+        <li><strong> Dernière étape, au moment de la rédaction d'un mail</strong></li>
+        <br><strong>A faire à chaque envoie de mail</strong>
+        <br><br>
+        <li>Cliquez sur l'icone pour activer le HTML en dessous de l'objet du mail</li>
+        <img id="myImg4" src="https://i.postimg.cc/zBxgZZHv/Capture-d-e-cran-2022-12-14-a-15-38-52.png" width="151"
+          border="0" alt="Cliquez sur l'icone pour activer le HTML en dessous de l'objet du mail">
+        <div id="myModal4" class="modal">
+
+          <!-- The Close Button -->
+          <span class="close">&times;</span>
+
+          <!-- Modal Content (The Image) -->
+          <img class="modal-content" id="img04"
+            src="https://i.postimg.cc/zBxgZZHv/Capture-d-e-cran-2022-12-14-a-15-38-52.png"
+            alt="Cliquez sur l'icone pour activer le HTML en dessous de l'objet du mail">
+
+          <!-- Modal Caption (Image Text) -->
+          <div id="caption4"></div>
+        </div>
+        <br> votre signature devrait s'afficher avec les images.
       </ol>
 
     </div>
