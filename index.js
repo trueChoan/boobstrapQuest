@@ -14,11 +14,11 @@ function selectText(element) {
   }
 }
 
-const toUpperCase = str => {
+const goodCase = str => {
   let arr = []
   for (let word of str) {
 
-    arr.push(word.charAt(0).toUpperCase() + word.slice(1))// capitalize first letter
+    arr.push(word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())// capitalize first letter
   }
   return (arr.join(' '))
 }
@@ -47,7 +47,7 @@ function addText(element) {
 
 
   if (element.id === 'name') {
-    names.forEach(e => e.innerHTML = toUpperCase(str));
+    names.forEach(e => e.innerHTML = goodCase(str));
   }
   if (element.id === 'position') {
     positions.forEach(e => e.innerHTML = element.value);
