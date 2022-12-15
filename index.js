@@ -14,6 +14,50 @@ function selectText(element) {
   }
 }
 
+const toUpperCase = str => {
+  let arr = []
+  for (let word of str) {
+
+    arr.push(word.charAt(0).toUpperCase() + word.slice(1))// capitalize first letter
+  }
+  return (arr.join(' '))
+}
+
+//take the phone number as a string and return it as a string with spaces every 2 digits
+const spacePhoneNumber = digits => {
+  let arr = []
+  for (let i = 0; i < digits.length; i++) {
+    if (i % 2 === 0 && i !== 0) {
+      arr.push(' ')
+    }
+    arr.push(digits[i])
+  }
+  return arr.join('')
+}
+
+
+
+//add text to innerHTML from input
+function addText(element) {
+  let names = document.querySelectorAll('.name');
+  let positions = document.querySelectorAll('.position');
+  let phones = document.querySelectorAll('.phone');
+  let str = element.value.split(' ');
+
+
+
+  if (element.id === 'name') {
+    names.forEach(e => e.innerHTML = toUpperCase(str));
+  }
+  if (element.id === 'position') {
+    positions.forEach(e => e.innerHTML = element.value);
+  }
+  if (element.id === 'phone') {
+    phones.forEach(e => e.innerHTML = spacePhoneNumber(element.value));
+  }
+}
+
+
 const copyText = () => {
   let copyText = document.getElementById("htmlcode");
   let content = copyText.innerHTML;
@@ -27,46 +71,22 @@ const copyText = () => {
   alert("Copied the text: " + content);
 };
 
-$(".controls > .select").click(function () {
-  var signature_id = $($(this).parents(".controls")[0]).data("sig");
-  selectText($("#" + signature_id)[0]);
-});
 
-$(".controls > .save").click(function () {
-  var link = $(this).siblings("a")[0];
-  var sig_div = $("#" + $(this).parents(".controls").data("sig") + "_container");
-  var sig_html = $(sig_div).html();
-  $(link).attr("href", "data:text/html, " + sig_html);
-  $(this).hide();
-  $(link).show();
-});
-
-// update per inputs
-$("#inputs input").keyup(function () {
-  var input = $(this).attr("id");
-  var val = $(this).val();
-  $("." + input).html(val);
-  if (input == "email") {
-    $(".email").attr("href", "mailto:" + val);
-  }
-  $(".controls > a").hide();
-  $(".controls > .save").show();
-});
 
 function getFunction() {
-  if (document.getElementById("get").checked) {
-    let e = document.getElementById("htmlcode");
-    let content = e.innerHTML;
-    prompt("Copiez le contenu: Cmd+C, Enter", content);
-  }
+
+  let e = document.getElementById("htmlcode");
+  let content = e.innerHTML;
+  prompt("Copiez le contenu: Cmd+C, Enter", content);
+
 }
 
 function getLogican() {
-  if (document.getElementById("getlogican").checked) {
-    let e = document.getElementById("htmlcode2");
-    let content = e.innerHTML;
-    prompt("Copiez le contenu: Cmd+C, Enter", content);
-  }
+
+  let e = document.getElementById("htmlcode2");
+  let content = e.innerHTML;
+  prompt("Copiez le contenu: Cmd+C, Enter", content);
+
 }
 
 //get the modal
@@ -76,6 +96,7 @@ const modal3 = document.getElementById("myModal3");
 const modal4 = document.getElementById("myModal4");
 
 // get the image and insert it inside the modal - use its "alt" text as a caption
+
 const img = document.getElementById("myImg");
 const img2 = document.getElementById("myImg2");
 const img3 = document.getElementById("myImg3");
@@ -143,7 +164,6 @@ span4.onclick = function () {
 
 //when the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
-  console.log(event.target);
   if (event.target == modal) {
     modal.style.display = "none";
   }
