@@ -53,7 +53,13 @@ function addText(element) {
     positions.forEach(e => e.innerHTML = element.value);
   }
   if (element.id === 'phone') {
-    phones.forEach(e => e.innerHTML = spacePhoneNumber(element.value));
+    if (isNaN(element.value)) {
+      phones.forEach(e => e.innerHTML = "Caractère invalide")
+      phones.forEach(e => e.style.color = 'red')
+    } else {
+      phones.forEach(e => e.innerHTML = spacePhoneNumber(element.value));
+      phones.forEach(e => e.style.color = "#808080")
+    }
   }
 }
 
