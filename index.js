@@ -25,12 +25,14 @@ const goodCase = str => {
 
 //take the phone number as a string and return it as a string with spaces every 2 digits
 const spacePhoneNumber = digits => {
+  const regex2 = new RegExp(/  */, 'g')
+  const tel = digits.replace(regex2, '');
   let arr = []
-  for (let i = 0; i < digits.length; i++) {
+  for (let i = 0; i < tel.length; i++) {
     if (i % 2 === 0 && i !== 0) {
       arr.push(' ')
     }
-    arr.push(digits[i])
+    arr.push(tel[i])
   }
   return arr.join('')
 }
@@ -44,7 +46,7 @@ function addText(element) {
   let phones = document.querySelectorAll('.phone');
   let str = element.value.split(' ');
 
-
+  const regex = new RegExp(/[0-9]/, 'g')
 
   if (element.id === 'name') {
     names.forEach(e => e.innerHTML = goodCase(str));
@@ -53,12 +55,13 @@ function addText(element) {
     positions.forEach(e => e.innerHTML = element.value);
   }
   if (element.id === 'phone') {
-    if (isNaN(element.value)) {
-      phones.forEach(e => e.innerHTML = "Caractère invalide")
-      phones.forEach(e => e.style.color = 'red')
-    } else {
+    if (regex.test(element.value)) {
       phones.forEach(e => e.innerHTML = spacePhoneNumber(element.value));
       phones.forEach(e => e.style.color = "#808080")
+    } else {
+      phones.forEach(e => e.innerHTML = "Format invalide")
+      phones.forEach(e => e.style.color = 'red')
+
     }
   }
 }
