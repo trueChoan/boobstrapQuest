@@ -14,6 +14,7 @@ function selectText(element) {
   }
 }
 
+//function to capitalize first letter of each word
 const goodCase = str => {
   let arr = []
   for (let word of str) {
@@ -23,8 +24,10 @@ const goodCase = str => {
   return (arr.join(' '))
 }
 
-//take the phone number as a string and return it as a string with spaces every 2 digits
+//take the phone number as a string and return it as a
+//string with spaces every 2 digits
 const spacePhoneNumber = digits => {
+  //regex to remove spaces
   const regex2 = new RegExp(/  */, 'g')
   const tel = digits.replace(regex2, '');
   let arr = []
@@ -45,8 +48,9 @@ function addText(element) {
   let positions = document.querySelectorAll('.position');
   let phones = document.querySelectorAll('.phone');
   let str = element.value.split(' ');
+  //regex for numbers and space and plus sign
+  const regex = new RegExp(/^[0-9 +]*$/);
 
-  const regex = new RegExp(/[0-9]/, 'g')
 
   if (element.id === 'name') {
     names.forEach(e => e.innerHTML = goodCase(str));
@@ -55,7 +59,7 @@ function addText(element) {
     positions.forEach(e => e.innerHTML = element.value);
   }
   if (element.id === 'phone') {
-    if (regex.test(element.value)) {
+    if (element.value.length === '' || regex.test(element.value)) {
       phones.forEach(e => e.innerHTML = spacePhoneNumber(element.value));
       phones.forEach(e => e.style.color = "#808080")
     } else {
