@@ -190,3 +190,11 @@ window.onclick = function (event) {
     modal4.style.display = "none";
   }
 };
+
+const instru = document.querySelector('.instructions');
+instru.style.cursor = 'pointer';
+instru.addEventListener('click', choiceOrNot)
+
+function choiceOrNot() {
+  this.dataset.choice = !this.dataset.choice;
+}
